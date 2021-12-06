@@ -1,3 +1,3 @@
 # Otto
 
-https://walkinded.github.io/Otto/map.html
+https://walkinded.github.io/Otto/demo.html
