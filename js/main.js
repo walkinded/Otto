@@ -68,6 +68,31 @@ $(document).ready(function() {
     $("[type=tel]").mask("+7 (999) 999-99-99");
   });
 
+  $(".fancybox").fancybox();
+  $(".fancybox-media").fancybox({
+    openEffect: "none",
+    closeEffect: "none",
+    width: 1280,
+    height: 720,
+    maxWidth: "100%",
+    maxHeight: "100%",
+    padding: 0,
+    margin: 0,
+    helpers: {
+      media: {
+        youtube: {
+          params: {
+            theme: "light",
+            vq: "hd720",
+            css: {
+              body: "color: #fff",
+            },
+          },
+        },
+      },
+    },
+  });
+
 });
 
 //Input для чисел
