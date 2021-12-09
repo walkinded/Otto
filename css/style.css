@@ -3963,6 +3963,152 @@ article img.aligncenter {
   background: url(../img/page-main-bg2.jpg) no-repeat center bottom / cover;
 }
 
+/* CATALOG */
+.catalog__cards {
+  margin: 0 0 40px 0;
+}
+
+/* SINGLE-PRODUCT */
+.single-product {
+}
+.single-product__header-product {
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 610px;
+}
+.header-product__img {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-product__img img {
+  max-width: 552px;
+  width: 100%;
+  max-height: 552px;
+  object-fit: contain;
+}
+.header-product__desc-product {
+  width: 50%;
+  padding: 60px 75px;
+}
+.desc-product__title {
+  font-size: 36px;
+  color: #034e7b;
+  font-weight: bold;
+  line-height: initial;
+  margin-bottom: 35px;
+}
+.desc-product__list {
+}
+.desc-product__list li {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: initial;
+  font-weight: 500;
+}
+.desc-product__list li p {
+  white-space: pre;
+}
+.desc-product__list li span {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.desc-product__list li span::before {
+  position: absolute;
+  content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+  width: max-content;
+  color: #000000;
+  bottom: 0;
+}
+
+.desc-product__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.desc-product__price div {
+  display: grid;
+}
+.desc-product__price .item-bottom__price {
+  margin-bottom: 0;
+}
+.desc-product__price .btn-2 {
+  width: 200px;
+}
+
+.single-product__tabs {
+  margin-top: 50px;
+}
+.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.tabs li {
+  float: left;
+  text-align: center;
+  border-bottom: none;
+  background: linear-gradient(180deg, rgba(151,211,247,1) 0%, rgba(95,177,226,1) 100%);
+  max-width: 300px;
+  width: 100%;
+}
+.tabs li:first-child {
+  border-radius: 6px 0 0 0;
+  overflow: hidden;
+}
+.tabs li:last-child {
+  border-radius: 0 6px 0 0;
+  overflow: hidden;
+}
+.tabs li a {
+  display: block;
+  padding: 15px 20px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.tabs li a:hover {
+  color: #fff;
+}
+.tabs li.active,
+.tabs li.active a:hover,
+.tabs li.active a {
+  color: #176fa4;;
+  background: linear-gradient(180deg, rgba(203,233,252,1) 0%, rgba(181,220,243,1) 100%);
+}
+.tab_container {
+  border-radius: 6px;
+  margin-top: 1px;
+  border-top: none;
+  background: #fff;
+}
+.tab_content {
+  padding: 45px;
+  font-size: 16px;
+}
+.tab_content ul {
+  list-style:decimal inside;
+  padding-left: 0;
+}
+.tab_content ul li {
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.tab_content .desc-product__list li {
+  margin: 0;
+}
+
 @media screen and (max-width: 1600px) {
   .form-bg {
     bottom: 38%;
@@ -4268,6 +4414,20 @@ article img.aligncenter {
     right: 76px;
     bottom: 20%;
   }
+  .single-product__header-product {
+    flex-direction: column;
+  }
+  .header-product__desc-product,
+  .header-product__img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .header-product__img {
+    height: 300px;
+  }
+  .header-product__img img {
+    width: auto;
+  }
 }
 @media screen and (max-width: 620px) {
   .page__main1 {
@@ -4398,6 +4558,32 @@ article img.aligncenter {
   .no-faucet-office-img {
     top: 0;
     height: calc(100% + 150px);
+  }
+  .desc-product__title {
+    font-size: 25px;
+  }
+  .header-product__desc-product {
+    padding: 25px;
+  }
+  .tabs li {
+    max-width: 100%;
+  }
+  .desc-product__list li {
+    flex-direction: column;
+    align-items: center;
+  }
+  .desc-product__list li p:first-child {
+    font-weight: bold;
+  }
+  .desc-product__price {
+    flex-direction: column;
+  }
+  .desc-product__price .btn-2 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .tab_content {
+    padding: 15px;
   }
 }
 @media screen and (max-width: 425px) {
