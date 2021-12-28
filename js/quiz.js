@@ -3,10 +3,10 @@
   $(document).ready(function($) {
   
       // $('.nextBtn').addClass('xbtn--grad__disabled');
-    $('.tab_content').hide();
-    $('.tab_content:first').show();
-    $('.tabs li:first').addClass('active');
-    $('.tabs li').click(function(event) {
+    $('.quiz__question-page .tab_content').hide();
+    $('.quiz__question-page .tab_content:first').show();
+    $('.quiz__question-page .tabs li:first').addClass('active');
+    $('.quiz__question-page .tabs li').click(function(event) {
       let tabId = $(this).find('a').attr('href');
       tabId=tabId.substr(-1,tabId.indexOf("-"));
       //console.log('#tab-'+tabId);
@@ -30,10 +30,12 @@
       } else {
         console.log('this unchecked');	
         $('#tab-'+tabId).find('.nextBtn').addClass('xbtn--grad__disabled');
+        $('#tab-4').find('.nextBtn').removeClass('xbtn--grad__disabled');
+
       }
       // arr_check.push($('#tab-'+tabId).find('input[type="radio"]:checked').val());
       
-      $('.tab_content').hide();
+      $('.quiz__question-page .tab_content').hide();
       // console.log(arr_check);
   
       var selectTab = $(this).find('a').attr("href");
@@ -45,6 +47,7 @@
     var arr_check = [];
   
     $('input[type="radio"]').on('change', function() {
+      $('.question-list__item-circle').removeClass('active')
       $(this).closest('.question-page').find('.nextBtn').removeClass('xbtn--grad__disabled');
       let nextTab = $(this).closest('.tab_content').attr('id');
       tabId = nextTab.substr(-1,nextTab.indexOf("-"));
@@ -53,6 +56,7 @@
       let titleText = $('#tab-'+tabId).find('.question-page__title p.fr').text();
   
       nextTabId ++;
+      $(this).parent().find('.question-list__item-circle').addClass('active')
       
       arr_check[tabId-1] = tabId+") "+titleText +": "+valRadio+" ";
       /*if(arr_check.indexOf(valRadio)==-1){
